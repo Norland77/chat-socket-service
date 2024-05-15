@@ -74,7 +74,6 @@ export class AppService implements OnGatewayInit {
     filetype,
   ): Promise<S3.ManagedUpload.SendData> {
     const s3 = new S3();
-
     return s3
       .upload({
         Bucket: this.configService.get('AWS_PUBLIC_BUCKET_NAME'),
